@@ -1,7 +1,7 @@
 # Junior Dev Sweden
 
 ## What is this?
-This the development repo for Junior Dev Sweden (JDS). It's a collaborative project with the aim to develop a simple
+This the repo for Junior Dev Sweden (JDS). It's a collaborative project with the aim to develop a simple
 website for JDS.
 
 
