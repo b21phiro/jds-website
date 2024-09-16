@@ -1,5 +1,6 @@
 import HomeView from "./views/pages/homeView.js";
 import AboutView from "./views/pages/aboutView.js";
+import ExceptionHandler from "./exceptionHandler.js";
 
 const routes = [
     { path: "/", title: "Home", name: "home", view: HomeView },
@@ -13,10 +14,10 @@ const routes = [
 function match(path) {
     const route = routes.find((route) => route.path === path);
     if (!route) {
-        console.error("404 Error");
-        return false;
+        ExceptionHandler.handle(401, "Page not found");
+    } else {
+        return route;
     }
-    return route;
 }
 
 export { match };
