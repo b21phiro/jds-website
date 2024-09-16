@@ -24,7 +24,6 @@ function run() {
  */
 function handler(pathname) {
     const route = Router.match(pathname);
-    console.log(pathname);
     const view = route.view();
     updateView(view);
 }
