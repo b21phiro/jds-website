@@ -1,4 +1,4 @@
-import * as App from "./core/app.js";
+import App from "./core/app.js";
 
 /**
  * The "main" function of this application.

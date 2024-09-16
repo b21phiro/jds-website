@@ -24,6 +24,9 @@ function run() {
  */
 function handler(pathname) {
     const route = Router.match(pathname);
+    if (!route) {
+        return;
+    }
     const view = route.view();
     updateView(view);
 }
@@ -91,4 +94,4 @@ function init(html) {
 
 }
 
-export { init, run };
+export default { init, run, updateView };
