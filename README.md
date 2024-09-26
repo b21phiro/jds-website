@@ -14,3 +14,6 @@ Our friend oscarthroedsson came up with an overall design for our website. This 
 All the information about the UI can be found in our common [Figma file](https://www.figma.com/design/HTO5PqyePipbHLqEETrOJq/JDS-(Junior-Dev-Sweden)-Design?node-id=0-1&t=VGUG0zMonMLvi34a-1).
 
 ![bild](https://github.com/user-attachments/assets/ab519976-dcb9-43dd-ae27-bf2b1ddf4ac9)
+
+### Icons / Images
+Icons and images can be found on [google drive.](https://drive.google.com/drive/folders/10yYS0b-scvaC80cO0rCIK9hfaB_K1JlS)
