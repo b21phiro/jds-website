@@ -1,4 +1,3 @@
-//import {button} from "../components/Button.js";
 import button from "../components/buttons.js";
 
 function layout() {
@@ -7,13 +6,20 @@ function layout() {
     <section>
         <h2>Comments</h2>
           <ul id="comments"></ul>
-          ${button.buttonPrimary("Join the Community")}
+          
+    </section>
+    
+    <section>
+        <p>Demonstrates a button</p>
+        ${button.buttonPrimary("Join the Community", "btn-join-community")}
     </section>
     `;
 }
 
 function afterRender() {
-    button.afterRender();
+    button.afterRender( "btn-join-community", () => {
+        alert("button clicked"); 
+    });
 }
 
 export default { layout, afterRender };
