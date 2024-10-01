@@ -1,0 +1,9 @@
+:root {
+    --clr-btn-primary: #5865F2;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+
+}
