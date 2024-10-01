@@ -27,25 +27,36 @@ function handler(pathname) {
     if (!route) {
         return;
     }
-    const view = route.view();
+
+    const view = route.view;
     updateView(view);
+
+    // Checks if there's a "afterRender" method within the view.
+    if (!view || typeof view.afterRender !== 'function') {
+        return;
+    }
+
+    // Executes the "afterRender" function.
+    view.afterRender();
+
 }
 
 /**
  * Updates the app-view with the given page/view.
- * @param view { string }
+ * @param view { Function }
  * @return boolean | void
  */
 function updateView(view) {
 
     clearView(root);
 
-    if (!view) {
-        console.error("No view given");
+    if (!view || !view.layout) {
+        console.error("Missing view!");
         return false;
     }
 
-    const appView = AppView(view);
+    const html = view.layout();
+    const appView = AppView(html);
 
     insertView(appView);
 
@@ -56,6 +67,7 @@ function updateView(view) {
             handler(ev.target.pathname);
         });
     });
+
 }
 
 /**
