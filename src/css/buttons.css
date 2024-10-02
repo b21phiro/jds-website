@@ -1,0 +1,20 @@
+
+
+.btn {
+    border: none;
+    border-radius: 0.4rem;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px var(--clr-btn-primary);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--clr-btn-primary);
+    color: white;    
+}
