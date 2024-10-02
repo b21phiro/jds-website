@@ -1,4 +1,6 @@
 import "../../../css/buttons.css";
+import exceptionHandler from "../../exceptionHandler";
+
 
 /**
  *  Creates a button element
@@ -19,7 +21,14 @@ function buttonPrimary(text, id) {
  *  @param callbackFunc { function } the callback function
  */
 function afterRender(id, callbackFunc) {
-    document.querySelector(`#${id}`).addEventListener("click", callbackFunc);
+    let btnAfterRend = document.querySelector(`#${id}`);
+
+    if (btnAfterRend != undefined) {
+        btnAfterRend.addEventListener("click", callbackFunc);
+    } else {
+        console.error(`Button with ID: -- ${id} -- is Missing`);
+        return;
+    }
 }
 
 
