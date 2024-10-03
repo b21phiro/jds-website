@@ -7,3 +7,8 @@
 .component-palette section {
     padding-block: 2rem;
 }
+
+.component-palette .comments-container {
+    display: grid;
+    gap: 1rem;
+}
