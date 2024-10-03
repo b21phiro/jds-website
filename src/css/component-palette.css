@@ -1,0 +1,9 @@
+.component-palette {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.component-palette section {
+    padding-block: 2rem;
+}
