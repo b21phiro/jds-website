@@ -9,9 +9,11 @@ function layout() {
 
         <section class="comments-container">
             <h2>Comments</h2>
-            ${comment.comment("../../../../public/avatar01.jpg", "Erik", "2024-09-02", "Måste jag dricka kaffe som utvecklare")}
+            ${comment.comment("../../../../public/avatar01.jpg", "Erik", "2024-09-02", "Måste jag dricka kaffe som utvecklare")}          
+        </section>
 
-            ${comment.comment("../../../../public/avatar02.jpg", "Leiya", "2024-09-02", "Måste jag dricka kaffe som utvecklare")}
+        <section class="comments-container">
+            ${comment.comment("../../../../public/avatar02.jpg", "Leiya", "2024-09-02", "Det var en gång en liten fågel, ja en fågel, han bodde på landet o roger hette han")}
           
         </section>
     
