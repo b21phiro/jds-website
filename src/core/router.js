@@ -1,10 +1,13 @@
 import HomeView from "./views/pages/homeView.js";
 import AboutView from "./views/pages/aboutView.js";
+import ComponentPalette from "./views/pages/componentPalette.js"; /** This is added just for testing components */
 import ExceptionHandler from "./exceptionHandler.js";
+
 
 const routes = [
     { path: "/", title: "Home", name: "home", view: HomeView },
-    { path: "/about", title: "About", name: "about", view: AboutView }
+    { path: "/about", title: "About", name: "about", view: AboutView },
+    { path: "/component-palette", title: "Palette", name: "palette", view: ComponentPalette }
 ];
 
 /**

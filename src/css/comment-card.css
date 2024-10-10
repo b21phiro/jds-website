@@ -1,0 +1,38 @@
+.card-comment {
+    background-color: #4F545C;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 3rem 1rem 1.3rem; 
+    border-radius: 0.6rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-comment .author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;   
+}
+
+.card-comment .author-avatar img {
+    height: 100%;
+}
+
+.card-comment.author-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-comment span {
+    color: #72767D;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.card-comment p {
+    color: #DCDDDE;
+}
