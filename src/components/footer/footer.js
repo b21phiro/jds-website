@@ -1,7 +1,6 @@
 import './footer.css';
 import * as Logo from '../logo/logo';
-import discord from './discord.svg';
-import linkedin from './linkedin.svg';
+import { socialLinks } from '../socials/socialLinks';
 
 const FOOTER_ELEMENT_ID = "footer";
 
@@ -14,10 +13,7 @@ function layout() {
                 <strong>Junior Developers of Sweden</strong>
                 <p>JDS är en icke-vinst driven organisation vars syfte är att skapa en gemenskap för juniorutvecklare i Sverige.</p>
             </div>
-            <div class="footer-social">
-                <a href="#"><img src=${discord} /></a>
-                <a href="#"><img src=${linkedin} /></a>
-            </div>            
+            ${socialLinks()}            
         </div>
     </footer>
     `;

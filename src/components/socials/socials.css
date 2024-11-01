@@ -1,0 +1,31 @@
+.social-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.logo-linkedin-container, .logo-discord-container {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.logo-linkedin-link, .logo-discord-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.logo-linkedin {
+    fill: var(--color-night-sky);
+    background-color: cornflowerblue;
+    padding: .25rem;
+    display: block;
+}
+
+.logo-discord {
+    fill: #57F287;
+    background-color: transparent;
+    padding: .25rem;
+    display: block;
+}
