@@ -8,6 +8,8 @@
     --color-rainy-sky: #E8ECF0;
     --color-night-sky: #1E293B;
     --color-yellow: #FFF200;
+    --color-purple: #5865F2;
+    --color-grape: #313CB5;
 
     /** Borders */
     --main-border-width: var(--size-1x);
@@ -26,6 +28,11 @@
     --size-16x  : 1rem; /* ~ 16px */
     --size-48x : 3rem;    /* ~ 48px */
     --size-64x : 4rem;    /* ~ 64px */
+
+    /** Animations */
+    --transition-speed: 100ms;
+    --transition-style: linear;
+    --transition: all var(--transition-speed) var(--transition-style);
 
 }
 
