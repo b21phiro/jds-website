@@ -1,0 +1,7 @@
+#app {
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+
+    background-color: var(--color-sky-blue);
+}
