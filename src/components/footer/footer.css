@@ -1,0 +1,30 @@
+#footer {
+    background-color: #1E293B;
+    color: #F1F5F9;
+    padding-block: 2rem;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        p {
+            text-align: justify;
+            max-width: 35ch;
+            line-height: 1.7;
+        }
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 2rem;
+
+        img {
+            height: 30px;
+        }
+    }
+}
