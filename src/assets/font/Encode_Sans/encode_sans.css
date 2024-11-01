@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Encode_Sans_Regular";
+    font-weight: 400;
+    src: local("Encode_Sans_Regular"), url("./static/EncodeSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Encode_Sans_Semi_Bold";
+    font-weight: 600;
+    src: local("Encode_Sans_Semi_Bold"), url("./static/EncodeSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Encode_Sans_Bold";
+    font-weight: 700;
+    src: local("Encode_Sans_Bold"), url("./static/EncodeSans-Bold.ttf") format("truetype");
+}
+
+html,
+.normal,
+.bread {
+    font-family: "Encode_Sans_Regular", sans-serif;
+    font-weight: 400;
+}
+
+.bread {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.bold {
+    font-family: "Encode_Sans_Bold", sans-serif;
+    font-weight: 700;
+}
+
+.semi-bold {
+    font-family: "Encode_Sans_Semi_Bold", sans-serif;
+    font-weight: 600;
+}
