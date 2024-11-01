@@ -3,16 +3,29 @@
 :root {
 
     /** Colors */
+    --color-white: #FFF;
     --color-sky-blue: #F1F5F9;
     --color-rainy-sky: #E8ECF0;
     --color-night-sky: #1E293B;
     --color-yellow: #FFF200;
 
     /** Borders */
-    --main-border-width: .0625rem; /* ~ 1px */
+    --main-border-width: var(--size-1x);
     --main-border-style: solid;
     --main-border-color: var(--color-rainy-sky);
     --main-border: var(--main-border-width) var(--main-border-style) var(--main-border-color);
+
+    /** Text */
+    --text-stroke-width: var(--size-1x);
+    --text-stroke-color: var(--color-white);
+
+    --text-very-large-title: clamp(var(--size-48x), 4.5vw, var(--size-64x));
+
+    /** Size */
+    --size-1x  : .0625rem; /* ~ 1px */
+    --size-16x  : 1rem; /* ~ 16px */
+    --size-48x : 3rem;    /* ~ 48px */
+    --size-64x : 4rem;    /* ~ 64px */
 
 }
 

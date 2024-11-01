@@ -1,0 +1,17 @@
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.hero-title {
+    font-size: var(--text-very-large-title);
+}
+
+@supports (-webkit-text-stroke: var(--text-stroke-width) var(--text-stroke-color)) {
+    .hero-title {
+      -webkit-text-stroke: var(--text-stroke-width) var(--text-stroke-color);
+      color: var(--color-night-sky);
+    }
+  }
