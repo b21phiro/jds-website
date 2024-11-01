@@ -1,0 +1,19 @@
+.logo-container {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.logo-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.logo {
+    fill: var(--color-night-sky);
+    background-color: var(--color-yellow);
+    padding: .25rem;
+    display: block;
+}
