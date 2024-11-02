@@ -1,8 +1,14 @@
 #hero {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {

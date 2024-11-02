@@ -12,4 +12,8 @@ function layout() {
     `;
 }
 
-export { layout };
+function onReady() {
+    Hero.onReady();
+}
+
+export { layout, onReady };

@@ -10,6 +10,10 @@
     --color-yellow: #FFF200;
     --color-purple: #5865F2;
     --color-grape: #313CB5;
+    --color-black: #000;
+    --color-red: #ff0000;
+    --color-green: #00ff00;
+    --color-blue: #0000ff;
 
     /** Borders */
     --main-border-width: var(--size-1x);
