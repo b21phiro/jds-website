@@ -1,0 +1,19 @@
+.chevron-logo-container {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+}
+
+.chevron-logo-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.chevron-logo {
+    fill: var(--color-night-sky);
+    background-color: cornflowerblue;
+    padding: .25rem;
+    display: block;
+}
