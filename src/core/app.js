@@ -18,6 +18,23 @@ function init()  {
     }
 
     rootElement.insertAdjacentHTML('afterbegin', View.layout());
+
+    // Event listener and logic for the accordion
+    rootElement.addEventListener('click', e => {
+        if (e.target.matches('[data-action="toggle-article"')) {
+            const content = e.target.parentNode.nextElementSibling;
+            content.classList.toggle("show-content");
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                e.target.style.transform = "rotate(0deg)";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                e.target.style.transform = "rotate(180deg)";
+            }
+            
+        }
+    })
     
 }
 

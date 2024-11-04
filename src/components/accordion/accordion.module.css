@@ -1,12 +1,23 @@
 .accordion {
+    color: white;
 
     button {
-        border: none;
-        background-color: rebeccapurple;
-        border-radius: 0.3rem;
+        border: 1px solid white;
+        background-color: transparent;
+        border-radius: 50%;
         padding: 0.5rem;
         color: white;
-        height: 4rem;
+        height: 2rem;
+
+        transition: all 200ms;
+
+        svg {
+            pointer-events: none;
+        }
+    }
+
+    article {
+        padding: 2rem;
     }
     
     :global(.title) {
@@ -16,7 +27,34 @@
     }
 
     :global(.content) {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 300ms;
+    }
+
+    :global(.show-content) {
+        margin-top: 1rem;
+    }
+
+    :global(.temp-image) {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        place-self: end;
+    }
+
+    :global(.article-one) {
+        background-color: #4F5CE9;
+    }
+
+    :global(.article-two) {
+        background-color: #8E3EF6;
+    }
+
+    :global(.article-three) {
+        background-color: #A628E0;
     }
 }
