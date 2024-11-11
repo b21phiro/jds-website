@@ -1,6 +1,10 @@
 .accordion {
     color: white;
 
+    h2 {
+        pointer-events: none;
+    }
+
     button {
         border: 1px solid white;
         background-color: transparent;
@@ -8,6 +12,7 @@
         padding: 0.5rem;
         color: white;
         height: 2rem;
+        pointer-events: none;
 
         transition: all 200ms;
 
@@ -24,6 +29,9 @@
         display: flex;
         justify-content: space-between;
 
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     :global(.content) {
@@ -57,4 +65,16 @@
     :global(.article-three) {
         background-color: #A628E0;
     }
+}
+
+@media (width < 768px) {
+    .accordion {
+        :global(.content) {
+            grid-template-columns: 1fr;
+        }
+        :global(.temp-image) {
+            width: 100%;
+        }
+    }
+    
 }
