@@ -1,6 +1,7 @@
 import './app.css';
 import { Config } from './config.js';
 import * as View from './view.js';
+import * as Sandbox from './../components/hero/sandbox.js';
 
 const ROOT_ELEMENT_ID = "app";
 
@@ -41,6 +42,8 @@ function init()  {
             
         }
     })
+
+    Sandbox.init();
     
 }
 
