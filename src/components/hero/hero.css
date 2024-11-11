@@ -1,0 +1,37 @@
+#hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: var(--text-very-large-title);
+    text-shadow: -2px 2px 4px rgba(0,0,0,.16);
+    color: var(--color-night-sky);
+    margin-bottom: 1em;
+}
+
+.hero-title span {
+    color: var(--color-purple);
+    text-shadow: -2px 2px 4px rgba(0, 102, 204, .16);
+}
+
+#hero .cta {
+    box-shadow: -2px 2px 4px rgba(0, 102, 204, .16);
+}
+
+#hero .cta .feather {
+    transition: var(--transition);
+}
+
+#hero .cta:hover .feather,
+#hero .cta:focus .feather {
+    transform: translateX(.5em);
+}
