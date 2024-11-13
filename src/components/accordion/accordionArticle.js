@@ -20,7 +20,7 @@ function layout(clasSuffix, title, content) {
                 </button>
             </div>
             <div class="content">
-                <p>${content}</p>
+                <p class="bread">${content}</p>
                 <figure class="temp-image"></figure>
             </div>
         </div>
@@ -32,11 +32,7 @@ function onClick(ev) {
     const article = ev.target.closest("article");
     const btn = article.querySelector(".btn");
     const content = article.querySelector(".content");
-
     content.classList.toggle("show-content");
-
-    console.log(ev.currentTarget);
-
     if (content.style.maxHeight) {
         content.style.maxHeight = null;
         btn.style.transform = "rotate(0deg)";
