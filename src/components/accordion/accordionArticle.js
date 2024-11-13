@@ -21,7 +21,9 @@ function layout(clasSuffix, title, content) {
             </div>
             <div class="content">
                 <p class="bread">${content}</p>
-                <figure class="temp-image"></figure>
+                <figure class="figure">
+                    <img class="image" href="" alt="" />
+                </figure>
             </div>
         </div>
     </article>
