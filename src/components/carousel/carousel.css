@@ -1,0 +1,25 @@
+#carousel {
+    padding-block: var(--size-48x);
+}
+
+.carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-buttons-container {
+    display: inline-flex;
+}
+
+.carousel-button {
+    min-width: 3rem;
+    min-height: 3rem;
+    border: var(--main-border);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.carousel-buttons-container .carousel-button:nth-child(1) {
+    margin-right: -1.5px; /* Just makes the right of the button same with with the left */
+}

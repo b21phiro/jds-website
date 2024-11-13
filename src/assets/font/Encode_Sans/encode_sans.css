@@ -49,7 +49,22 @@ h6,
     font-weight: 700;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
 .semi-bold {
     font-family: "Encode_Sans_Semi_Bold", sans-serif;
     font-weight: 600;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: "Encode_Sans_Semi_Bold", sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
 }
