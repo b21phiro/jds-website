@@ -20,7 +20,7 @@ function layout(clasSuffix, title, content) {
                 </button>
             </div>
             <div class="content">
-                <p class="bread">${content}</p>
+                <p class="bread white">${content}</p>
                 <figure class="figure">
                     <img class="image" href="" alt="" />
                 </figure>

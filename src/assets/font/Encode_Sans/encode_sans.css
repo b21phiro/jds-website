@@ -21,6 +21,7 @@ html,
 .bread {
     font-family: "Encode_Sans_Regular", sans-serif;
     font-weight: 400;
+    color: var(--color-night-sky);
 }
 
 .bread {
@@ -67,4 +68,8 @@ h1 {
     font-family: "Encode_Sans_Semi_Bold", sans-serif;
     font-weight: bold;
     line-height: 1.5;
+}
+
+.white {
+    color: var(--color-white);
 }
