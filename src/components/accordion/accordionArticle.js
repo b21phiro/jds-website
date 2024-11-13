@@ -3,6 +3,13 @@ import ChevronDown from './../icon/chevronDown.js';
 
 function layout(clasSuffix, title, content) {
 
+    // Event listener and logic for the main section accordion
+    document.addEventListener('click', ev => {
+        if (ev.target.matches('[data-action="toggle-article"]')) {
+            onClick(ev);
+        }
+    });
+
     return /*html*/ `
     <article  class="article-${clasSuffix}">
         <div class="container">
@@ -19,6 +26,24 @@ function layout(clasSuffix, title, content) {
         </div>
     </article>
     `;
+}
+
+function onClick(ev) {
+    const article = ev.target.closest("article");
+    const btn = article.querySelector(".btn");
+    const content = article.querySelector(".content");
+
+    content.classList.toggle("show-content");
+
+    console.log(ev.currentTarget);
+
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        btn.style.transform = "rotate(0deg)";
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        btn.style.transform = "rotate(180deg)";
+    }
 }
 
 export { layout };
