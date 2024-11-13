@@ -8,17 +8,13 @@
     button {
         border: 1px solid white;
         background-color: transparent;
-        border-radius: 50%;
         padding: 0.5rem;
         color: white;
         height: 2rem;
         pointer-events: none;
-
+        min-width: 3rem;
+        min-height: 3rem;
         transition: all 200ms;
-
-        svg {
-            pointer-events: none;
-        }
     }
 
     article {
@@ -48,8 +44,11 @@
     }
 
     :global(.temp-image) {
-        width: 200px;
-        height: 200px;
+        aspect-ratio: 1;
+        min-width: 18.75rem;
+        max-width: 48rem;
+        display: block;
+        width: 100%;
         background-color: #ccc;
         place-self: end;
     }
