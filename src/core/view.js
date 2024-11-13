@@ -1,5 +1,5 @@
 import * as Header from '../components/header/header.js';
-import * as accordion from '../components/accordion/accordion.js';
+import * as Accordion from '../components/accordion/accordion.js';
 import * as Footer from '../components/footer/footer.js';
 import * as Hero from '../components/hero/hero.js';
 
@@ -8,7 +8,7 @@ function layout() {
     ${ Header.layout() }
     <main class="main">
     ${ Hero.layout() }
-    ${ accordion.layout() }
+    ${ Accordion.layout() }
     </main>
     ${ Footer.layout() }
     `;

@@ -1,23 +1,47 @@
-import * as chevron from './chevron-logo';
+import { Color } from '../../core/config';
+import ChevronDown from './../icon/chevronDown.js';
 
 function layout(clasSuffix, title, content) {
 
+    // Event listener and logic for the main section accordion
+    document.addEventListener('click', ev => {
+        if (ev.target.matches('[data-action="toggle-article"]')) {
+            onClick(ev);
+        }
+    });
+
     return /*html*/ `
-    
     <article  class="article-${clasSuffix}">
         <div class="container">
             <div data-action="toggle-article" class="title">
                 <h2>${title}</h2>
-                <button class="btn">${chevron.layout()}</button>
+                <button class="btn">
+                    ${ ChevronDown({ color: Color.WHITE }) }
+                </button>
             </div>
             <div class="content">
-                <p>${content}</p>
-                <div class="temp-image"></div>
+                <p class="bread">${content}</p>
+                <figure class="figure">
+                    <img class="image" href="" alt="" />
+                </figure>
             </div>
         </div>
     </article>
-
-    `
+    `;
 }
 
-export {layout}
+function onClick(ev) {
+    const article = ev.target.closest("article");
+    const btn = article.querySelector(".btn");
+    const content = article.querySelector(".content");
+    content.classList.toggle("show-content");
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        btn.style.transform = "rotate(0deg)";
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        btn.style.transform = "rotate(180deg)";
+    }
+}
+
+export { layout };
