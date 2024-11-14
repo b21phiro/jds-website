@@ -13,7 +13,7 @@
 }
 
 .hero-title {
-    font-size: var(--text-very-large-title);
+    font-size: clamp(2.3rem, 4.5vw, var(--text-very-large-title));
     text-shadow: -2px 2px 4px rgba(0,0,0,.16);
     color: var(--color-night-sky);
     margin-bottom: 1em;
