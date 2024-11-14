@@ -33,6 +33,7 @@
     display: flex;
     padding: 0;
     scroll-behavior: smooth;
+    justify-content: center;
 }
 
 .carousel-list-item {
