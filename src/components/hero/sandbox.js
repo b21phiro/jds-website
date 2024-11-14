@@ -6,7 +6,10 @@ const CANVAS_ELEMENT_ID = "sandbox";
 let canvas,
     ctx,
     grid,
-    animationFrameId;
+    initial = true,
+    resizeTimeOutID = 0,
+    animationFrameId,
+    paused = false;
 
 function layout() {
     return /*HTML*/ `
@@ -95,12 +98,15 @@ function createCell(id, x, y, size) {
 }
 
 function animate() {
+    if (paused) { return; }
     animationFrameId = requestAnimationFrame(animate);
     update();
     draw();
 }
 
 function update() {
+
+    console.log("yes");
 
     grid?.forEach((cell) => {
         cell.update();
@@ -116,10 +122,38 @@ function draw() {
 }
 
 function resize() {
-    const { width, height } = canvas.parentElement?.getBoundingClientRect();
-    canvas.width = width;
-    canvas.height = height;
-    initGrid();
+
+    // If the site loads for the first time, the canvas should be loaded instantly.
+    // Otherwise, it should delay the resize of the canvas for 250ms, so it does
+    // not spam the client with new dimensions.
+    if (initial) {
+        initial = false;
+        const { width, height } = canvas.parentElement?.getBoundingClientRect();
+        canvas.width = width;
+        canvas.height = height;
+        initGrid();
+    } else {
+        pause();
+        clearTimeout(resizeTimeOutID);
+        resizeTimeOutID = setTimeout(() => {
+            const { width, height } = canvas.parentElement?.getBoundingClientRect();
+            canvas.width = width;
+            canvas.height = height;
+            initGrid();
+            resume();
+        }, 250);
+    }
+    
+}
+
+function pause() {
+    paused = true;
+    animationFrameId = 0;
+}
+
+function resume() {
+    paused = false;
+    animate();
 }
 
 export { layout, init };
