@@ -1,7 +1,7 @@
 import { Color } from '../../core/config';
 import ChevronDown from './../icon/chevronDown.js';
 
-function layout(clasSuffix, title, content) {
+function layout(clasSuffix, title, content, image, isOpen = false) {
 
     // Event listener and logic for the main section accordion
     document.addEventListener('click', ev => {
@@ -19,7 +19,7 @@ function layout(clasSuffix, title, content) {
                     ${ ChevronDown({ color: Color.WHITE }) }
                 </button>
             </div>
-            <div class="content">
+            <div class="${isOpen ? 'content show-content' : 'content'}">
                 <p class="bread">${content}</p>
                 <figure class="figure">
                     <img class="image" href="" alt="" />
@@ -35,13 +35,6 @@ function onClick(ev) {
     const btn = article.querySelector(".btn");
     const content = article.querySelector(".content");
     content.classList.toggle("show-content");
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        btn.style.transform = "rotate(0deg)";
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        btn.style.transform = "rotate(180deg)";
-    }
 }
 
 export { layout };
