@@ -44,7 +44,7 @@
     }
 
     :global(.show-content) {
-        margin-top: 1rem;
+        margin-top: var(--size-48x);
         max-height: 800px;
     }
 
