@@ -30,7 +30,7 @@ function layout(clasSuffix, title, content, image, isOpen = false) {
             <div class="${isOpen ? 'content show-content' : 'content'}">
                 <p class="bread white">${content}</p>
                 <figure class="figure">
-                    <img class="image" href="" alt="" />
+                    <img class="image" src="${image}" href="" alt="" />
                 </figure>
             </div>
         </div>
