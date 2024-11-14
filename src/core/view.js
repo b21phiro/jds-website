@@ -17,7 +17,6 @@ function layout() {
 }
 
 function onReady() {
-    Hero.onReady();
     Testimonials.onReady();
 }
 

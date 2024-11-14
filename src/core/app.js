@@ -21,6 +21,8 @@ function init()  {
     rootElement.insertAdjacentHTML('afterbegin', View.layout());
 
     Sandbox.init();
+
+    View.onReady();
     
 }
 
