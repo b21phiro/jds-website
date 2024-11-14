@@ -9,8 +9,7 @@ let canvas,
     initial = true,
     resizeTimeOutID = 0,
     animationFrameId,
-    paused = false,
-    isLooking; // Checks whenever the user is looking on the canvas or not.
+    paused = false;
 
 function layout() {
     return /*HTML*/ `
@@ -119,13 +118,9 @@ function animate() {
 }
 
 function update() {
-
-    console.log("yes");
-
     grid?.forEach((cell) => {
         cell.update();
     });
-
 }
 
 function draw() {
@@ -162,7 +157,7 @@ function resize() {
 
 function pause() {
     paused = true;
-    animationFrameId = 0;
+    cancelAnimationFrame(animationFrameId);
 }
 
 function resume() {
