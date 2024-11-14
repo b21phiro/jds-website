@@ -18,7 +18,8 @@ function layout() {
                 href: Config.DISCORD_LINK, 
                 icon: ArrowRight(), 
                 text: "Gå med i discord", 
-                title: "Gå med i våran discord grupp"
+                title: "Gå med i våran discord grupp",
+                ariaLabel: "Klicka för att gå med i discord gruppen."
             })}
         </section>
 
