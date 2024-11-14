@@ -73,6 +73,7 @@ async function onReady() {
     panLeftButton.addEventListener('mousedown', (ev) => { panLeftWithinTestimonialList(); });
     panLeftButton.addEventListener('mouseup', (ev) => { stopPanWithinTestimonialList(); });
     panLeftButton.addEventListener('keyup', (ev) => { stopPanWithinTestimonialList(); });
+    panLeftButton.addEventListener('touchend', (ev) => { stopPanWithinTestimonialList(); })
     panLeftButton.addEventListener('keydown', (ev) => {
         const { code } = ev;
         switch (code) {
@@ -83,6 +84,9 @@ async function onReady() {
             default:
                 break;
         }
+    });
+    panLeftButton.addEventListener('touchstart', (ev) => {
+        panLeftWithinTestimonialList();
     });
 
     // Allows user to pan right by clicking or using the keyboard.
@@ -97,6 +101,10 @@ async function onReady() {
                 break;
         }
     });
+    panRightButton.addEventListener('touchstart', (ev) => {
+        panRightWithinTestimonialList();
+    });
+    panRightButton.addEventListener('touchend', (ev) => { stopPanWithinTestimonialList(); })
     panRightButton.addEventListener('keyup', (ev) => { stopPanWithinTestimonialList(); });
     panRightButton.addEventListener('mousedown', (ev) => { panRightWithinTestimonialList(); });
     panRightButton.addEventListener('mouseup', (ev) => { stopPanWithinTestimonialList(); });
