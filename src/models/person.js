@@ -13,13 +13,8 @@ class Person {
         this.comment = comment;
     }
 
-    async getAvatar() { 
-        const { default: src } = await import('./../../data/avatars/users/'+this.avatar);
-        return src;
-    }
-    setAvatar(filename) {
-        this.avatar = filename;
-    }
+    getAvatar() { return "/avatars/users/"+this.avatar; }
+    setAvatar(filename) { this.avatar = filename; }
 
     getId() { return this._id; }
     setId(id) { this._id = id; }
@@ -36,7 +31,8 @@ class People
 {
     static async getAll(options = {}) {
         const result = [];
-        await fetch('./../../data/people.json')
+
+        await fetch('/people.json')
             .then(res => res.json())
             .then(data => {
                 data.users.forEach(({id, name, comment, avatar}) => {

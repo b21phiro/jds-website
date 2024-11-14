@@ -1,4 +1,5 @@
 import './carousel.css';
+
 import { People } from '../../models/person.js';
 
 import ArrowLeft from './../icon/arrowLeft.js';
@@ -53,7 +54,7 @@ async function onReady() {
         <li class="carousel-list-item">
             <article class="carousel-list-item-article">
                 <figure class="carousel-list-item-article-avatar">
-                    <img src="${ await person.getAvatar() }" alt="${ person.getName() }" />
+                    <img src="${ person.getAvatar() }" alt="${ person.getName() }" />
                 </figure>
                 <h4 class="carousel-list-item-article-title">${ person.getName() }</h4>
                 <p class="carousel-list-item-article-text">- ${ person.getComment() }</p>
