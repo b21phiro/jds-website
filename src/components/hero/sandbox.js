@@ -42,9 +42,11 @@ function init() {
 
     // Each second targets a random cell and highlights it.
     setInterval(() => {
-        let randomIndex = Math.round(Math.random() * grid.length - 1);
-        let cell = grid[randomIndex];
-        cell.highlight();
+        if (!paused) {
+            let randomIndex = Math.round(Math.random() * grid.length - 1);
+            let cell = grid[randomIndex];
+            cell.highlight();
+        }
     }, 1000);
 
     // Pause the canvas if the user scroll more than half of the canvas/hero.
