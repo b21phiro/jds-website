@@ -13,14 +13,14 @@ function layout(clasSuffix, title, content, image, isOpen = false) {
     return /*html*/ `
     <article  class="article-${clasSuffix}">
         <div class="container">
-            <div data-action="toggle-article" class="title">
-                <h2>${title}</h2>
+            <div class="toggle-article" data-action="toggle-article">
+                <h2 class="title">${title}</h2>
                 <button class="btn">
                     ${ ChevronDown({ color: Color.WHITE }) }
                 </button>
             </div>
             <div class="${isOpen ? 'content show-content' : 'content'}">
-                <p class="bread">${content}</p>
+                <p class="bread white">${content}</p>
                 <figure class="figure">
                     <img class="image" href="" alt="" />
                 </figure>
