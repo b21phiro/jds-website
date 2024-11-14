@@ -43,6 +43,12 @@ class People
                     let person = new Person(id, name, avatar, comment);
                     result.push(person);
                 });
+
+                // Shuffles the returning array.
+                if (options?.shuffle) {
+                    result.sort((a, b) => 0.5 - Math.random());
+                }
+
             });
         return result;
     }

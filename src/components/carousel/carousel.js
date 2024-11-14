@@ -47,7 +47,7 @@ async function onReady() {
 
     // Adds the testimonials to the list.
     clearTestimonialList();
-    const people = await People.getAll();
+    const people = await People.getAll({ shuffle: true });
     people.forEach( async (person) => {
         let testimonial = /* HTML */`
         <li class="carousel-list-item">
