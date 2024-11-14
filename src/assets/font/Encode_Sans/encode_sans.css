@@ -51,7 +51,7 @@ h6,
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: clamp(1rem, 4.5vw, 2rem);
 }
 
 h1 {
@@ -64,7 +64,7 @@ h1 {
 }
 
 .title {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     font-family: "Encode_Sans_Semi_Bold", sans-serif;
     font-weight: bold;
     line-height: 1.5;

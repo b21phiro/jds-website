@@ -17,12 +17,13 @@
     }
 
     article {
-        padding: 2rem;
+        padding-block: var(--size-48x);
     }
     
     :global(.toggle-article) {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         &:hover {
             cursor: pointer;
