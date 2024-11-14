@@ -9,7 +9,8 @@ let canvas,
     initial = true,
     resizeTimeOutID = 0,
     animationFrameId,
-    paused = false;
+    paused = false,
+    isLooking; // Checks whenever the user is looking on the canvas or not.
 
 function layout() {
     return /*HTML*/ `
@@ -39,11 +40,22 @@ function init() {
 
     animate();
 
+    // Each second targets a random cell and highlights it.
     setInterval(() => {
-        let randomIndex = Math.floor(Math.random() * grid.length - 1);
+        let randomIndex = Math.round(Math.random() * grid.length - 1);
         let cell = grid[randomIndex];
         cell.highlight();
     }, 1000);
+
+    // Pause the canvas if the user scroll more than half of the canvas/hero.
+    // Resumes if user scrolls back up.
+    document.addEventListener('scroll', (ev) => {
+        if (canvas.getBoundingClientRect().bottom < (canvas.getBoundingClientRect().height / 2)) {
+            pause();
+        } else if (paused) {
+            resume();
+        } else {}
+    });
 
 }
 
@@ -143,7 +155,7 @@ function resize() {
             resume();
         }, 250);
     }
-    
+
 }
 
 function pause() {
