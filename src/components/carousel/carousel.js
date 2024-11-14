@@ -64,6 +64,9 @@ async function onReady() {
         testimonialsListElement.insertAdjacentHTML('afterbegin', testimonial);
     });
 
+    // Resets position to 0.
+    testimonialsListElement.scrollLeft = 0;
+
     // Registers carousel buttons from DOM.
     panLeftButton = document.getElementById(PAN_LEFT_BUTTON_ELEM_ID);
     panRightButton = document.getElementById(PAN_RIGHT_BUTTON_ELEM_ID);
