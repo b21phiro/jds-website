@@ -14,6 +14,10 @@
         min-width: 3rem;
         min-height: 3rem;
         transition: all 200ms;
+
+        svg {
+            transition: all 200ms;
+        }
     }
 
     article {
@@ -45,7 +49,10 @@
     }
 
     :global(.container:has(.show-content) .btn) {
-        rotate: 180deg;
+        svg {
+            rotate: 180deg;
+        }
+        
     }
 
     :global(.figure) {
