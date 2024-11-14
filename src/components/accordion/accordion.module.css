@@ -40,6 +40,11 @@
 
     :global(.show-content) {
         margin-top: 1rem;
+        max-height: 800px;
+    }
+
+    :global(.container:has(.show-content) .btn) {
+        rotate: 180deg;
     }
 
     :global(.figure) {
