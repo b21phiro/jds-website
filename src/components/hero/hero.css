@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     min-height: 90vh;
+    border-bottom: var(--main-border);
 }
 
 #hero .container {
