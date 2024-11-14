@@ -5,6 +5,9 @@
     justify-content: center;
     min-height: 90vh;
     border-bottom: var(--main-border);
+    background-image: url("./square.gif");
+
+    text-align: center;
 }
 
 #hero .container {
@@ -35,4 +38,31 @@
 #hero .cta:hover .feather,
 #hero .cta:focus .feather {
     transform: translateX(.5em);
+}
+
+/** Doodle */
+
+#biggest {
+    position: relative;
+    display: inline-flex;
+}
+
+#text-highlighter {
+    position: absolute;
+    bottom: -.5em;
+    width: 100%;
+    transform: scale(1.12);
+}
+
+#text-highlighter path {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: draw 3s linear forwards;
+    animation-delay: 250ms;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
