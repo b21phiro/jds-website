@@ -51,7 +51,7 @@ async function onReady() {
     const people = await People.getAll({ shuffle: true });
     people.forEach( async (person) => {
         let testimonial = /* HTML */`
-        <li class="carousel-list-item">
+        <li class="carousel-list-item no-select">
             <article class="carousel-list-item-article">
                 <figure class="carousel-list-item-article-avatar">
                     <img src="${ person.getAvatar() }" alt="${ person.getName() }" />

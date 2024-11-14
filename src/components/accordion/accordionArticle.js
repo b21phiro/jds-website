@@ -22,7 +22,7 @@ function layout(clasSuffix, title, content, image, isOpen = false) {
     <article  class="article-${clasSuffix}">
         <div class="container">
             <div class="toggle-article" data-action="toggle-article">
-                <h2 class="title">${title}</h2>
+                <h2 class="title no-selection">${title}</h2>
                 <button class="btn">
                     ${ ChevronDown({ color: Color.WHITE }) }
                 </button>
