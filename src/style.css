@@ -46,3 +46,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
