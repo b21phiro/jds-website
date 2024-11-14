@@ -22,10 +22,10 @@ function layout() {
         <div class="container carousel-header">
             <h2 class="title">Vad tycker vi?</h2>
             <div class="carousel-buttons-container">
-                <button id="${PAN_LEFT_BUTTON_ELEM_ID}" class="carousel-button" title="Dra vänster">
+                <button id="${PAN_LEFT_BUTTON_ELEM_ID}" class="carousel-button" title="Dra vänster" aria-label="Håll space för att dra karusellen åt vänster.">
                     ${ ArrowLeft() }
                 </button>
-                <button id="${PAN_RIGHT_BUTTON_ELEM_ID}" class="carousel-button" title="Dra höger">
+                <button id="${PAN_RIGHT_BUTTON_ELEM_ID}" class="carousel-button" title="Dra höger" aria-label="Håll space för att dra karusellen åt höger.">
                     ${ ArrowRight() }
                 </button>
             </div>
