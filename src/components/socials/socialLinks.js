@@ -6,10 +6,10 @@ function socialLinks() {
 
 
     return /*HTML*/ `
-    <div class="social-links">
+    <nav class="social-links">
         ${discord.layout()}
         ${linkedin.layout()}
-    </div>
+    </nav>
     `
 }
 
