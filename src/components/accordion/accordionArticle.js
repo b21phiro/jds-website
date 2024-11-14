@@ -10,6 +10,14 @@ function layout(clasSuffix, title, content, image, isOpen = false) {
         }
     });
 
+    document.addEventListener("keydown", ev => {
+        if (ev.target.matches('[data-action="toggle-article"] .btn')) {
+            if (ev.code === "Space" || ev.code === "Enter") {
+                onClick(ev);
+            }
+        }
+    })
+
     return /*html*/ `
     <article  class="article-${clasSuffix}">
         <div class="container">
