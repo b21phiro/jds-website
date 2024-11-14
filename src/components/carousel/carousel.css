@@ -21,6 +21,24 @@
     border: var(--main-border);
     background-color: transparent;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-button:hover,
+.carousel-button:focus-within {
+    background-color: var(--color-rainy-sky);
+}
+
+.carousel-button .feather {
+    transition: var(--transition);
+}
+
+.carousel-button:active:nth-child(1) .feather {
+    transform: translateX(-.5rem);
+}
+
+.carousel-button:active:nth-child(2) .feather {
+    transform: translateX(.5rem);
 }
 
 .carousel-buttons-container .carousel-button:nth-child(1) {
