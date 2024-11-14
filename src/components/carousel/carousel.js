@@ -37,13 +37,15 @@ function layout() {
 
 async function onReady() {
 
+    // Delegates the UL-element for the carousel.
+    // Returns false if null.
     testimonialsListElement = document.getElementById(TESTIMONIAL_LIST_ELEM_ID);
-
     if (!testimonialsListElement) {
         console.error(`Missing ${TESTIMONIAL_LIST_ELEM_ID}\n`)
         return;
     }
 
+    // Adds the testimonials to the list.
     clearTestimonialList();
     const people = await People.getAll();
     people.forEach( async (person) => {
@@ -61,32 +63,42 @@ async function onReady() {
         testimonialsListElement.insertAdjacentHTML('afterbegin', testimonial);
     });
 
+    // Registers carousel buttons from DOM.
     panLeftButton = document.getElementById(PAN_LEFT_BUTTON_ELEM_ID);
     panRightButton = document.getElementById(PAN_RIGHT_BUTTON_ELEM_ID);
+    if (!panLeftButton || !panRightButton) { return false; }
 
-    if (!panLeftButton || !panRightButton) {
-        return false;
-    }
-
-    panLeftButton.addEventListener('mousedown', (ev) => {
-        pan = true;
-        panLeft = true;
-        panWithinTestimonialList();
+    // Allows user to pan left by clicking or using the keyboard.
+    panLeftButton.addEventListener('mousedown', (ev) => { panLeftWithinTestimonialList(); });
+    panLeftButton.addEventListener('mouseup', (ev) => { stopPanWithinTestimonialList(); });
+    panLeftButton.addEventListener('keyup', (ev) => { stopPanWithinTestimonialList(); });
+    panLeftButton.addEventListener('keydown', (ev) => {
+        const { code } = ev;
+        switch (code) {
+            case 'Enter':
+            case 'Space':
+                panLeftWithinTestimonialList();
+                break;
+            default:
+                break;
+        }
     });
 
-    panLeftButton.addEventListener('mouseup', (ev) => {
-        stopPanWithinTestimonialList();
+    // Allows user to pan right by clicking or using the keyboard.
+    panRightButton.addEventListener('keydown', (ev) => {
+        const { code } = ev;
+        switch (code) {
+            case 'Enter':
+            case 'Space':
+                panRightWithinTestimonialList();
+                break;
+            default:
+                break;
+        }
     });
-
-    panRightButton.addEventListener('mousedown', (ev) => {
-        pan = true;
-        panRight = true;
-        panWithinTestimonialList();
-    });
-
-    panRightButton.addEventListener('mouseup', (ev) => {
-        stopPanWithinTestimonialList();
-    });
+    panRightButton.addEventListener('keyup', (ev) => { stopPanWithinTestimonialList(); });
+    panRightButton.addEventListener('mousedown', (ev) => { panRightWithinTestimonialList(); });
+    panRightButton.addEventListener('mouseup', (ev) => { stopPanWithinTestimonialList(); });
     
 }
 
@@ -94,6 +106,20 @@ function stopPanWithinTestimonialList() {
     pan = false;
     panLeft = false;
     panRight = false;
+}
+
+function panLeftWithinTestimonialList() {
+    pan = true;
+    panLeft = true;
+    panRight = false;
+    panWithinTestimonialList();
+}
+
+function panRightWithinTestimonialList() {
+    pan = true;
+    panRight = true;
+    panLeft = false;
+    panWithinTestimonialList();
 }
 
 function panWithinTestimonialList() {
