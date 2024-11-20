@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Philip Rosenqvist",
+            "avatar": "avatar-0.jpg",
+            "comment": "JDS ger en fantastisk chans att få sammarbeta med andra!"
+        },
+        {
+            "id": 1,
+            "name": "Roger Dunder",
+            "avatar": "avatar-1.jpg",
+            "comment": "Ett fantastiskt välkomnande ställe att få växa på tillsammans med likasinnade."
+        },
+        {
+            "id": 2,
+            "name": "\"Silversurfer\"",
+            "avatar": "avatar-2.jpg",
+            "comment": "JDS har gett mig nya insikter och stöd i både kod och karriär."
+        }
+    ]
+}

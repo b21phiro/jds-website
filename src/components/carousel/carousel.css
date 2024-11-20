@@ -1,0 +1,96 @@
+#carousel {
+    padding-block: var(--size-48x);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-48x);
+}
+
+.carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-buttons-container {
+    display: inline-flex;
+}
+
+.carousel-button {
+    min-width: 3rem;
+    min-height: 3rem;
+    border: var(--main-border);
+    background-color: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-button:hover,
+.carousel-button:focus-within {
+    background-color: var(--color-rainy-sky);
+}
+
+.carousel-button .feather {
+    transition: var(--transition);
+}
+
+.carousel-button:active:nth-child(1) .feather {
+    transform: translateX(-.5rem);
+}
+
+.carousel-button:active:nth-child(2) .feather {
+    transform: translateX(.5rem);
+}
+
+.carousel-buttons-container .carousel-button:nth-child(1) {
+    margin-right: -.0625rem; /* Just makes the right of the button same with with the left */
+}
+
+.carousel-list {
+    width: 100vw;
+    overflow-x: auto;
+    display: flex;
+    padding: 0;
+    scroll-behavior: smooth;
+    justify-content: center;
+}
+
+.carousel-list-item {
+    list-style: none;
+    margin-left: -.0625rem;
+}
+
+.carousel-list-item-article {
+    border: var(--main-border);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem;
+    max-width: 24rem;
+    min-width: 18.75rem;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-list-item-article-avatar {
+    aspect-ratio: 1;
+    border-radius: 100%;
+    width: 100%;
+    border: var(--main-border-width) var(--main-border-style) var(--color-white);
+    overflow: hidden;
+}
+
+.carousel-list-item-article-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    background-color: var(--color-rainy-sky);
+}
+
+.carousel-list-item-article-text {
+    font-size: .875rem;
+    line-height: 1.5;
+    text-align: center;
+}

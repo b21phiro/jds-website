@@ -1,0 +1,33 @@
+#app {
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--color-sky-blue);
+}
+
+.container {
+    padding-inline: 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media (width > 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (width > 1200px) {
+    .container {
+        max-width: 1120px;
+    }
+}
